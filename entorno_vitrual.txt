@@ -1,0 +1,34 @@
+####################################################
+###### Instalar un entorno virtual con python ######
+####################################################
+
+1_ Ingresar en la CMD
+2_ Posicionarse en la carpeta donde vamos a instalar el entorno virtual
+3_ Ejecutar el siguiente comando "virtualenv 'nombre_del_entorno'"
+4_ Una vez instalado el entorno dirigirnos ingresar a la carpeta 
+    'nombre_del_entorno/Scripts'
+5_ Ejecutar el siguiente comando para correr el entorno virtual 'activate'
+
+nota: Para cerrar el entorno virtual debemos escribir en la consola que estamos
+    trabajando el comando 'deactivate'
+
+###################################################
+########## Crear un archivo Requiriments ##########
+###################################################
+
+nota: Antes de crear el archivo debemos tener el entorno virtual activo
+
+1_ En la consola debemos ejecutar el comando:
+    pip freeze > "requiriments.txt"
+2_ Se creara un archivo de texto de nombre requiriments.txt
+
+#######################################################
+###### Instalar dependecias a partir del archivo ######
+###### requiriments                              ######
+#######################################################
+
+nota: Antes de instalar los arhcivos debemos tener activo el entorno virtual
+    donde vamos a instalar las dependencias
+
+1_ En la consola debemos ejecutar el siguiente comando:
+    pip install -r "requiriments.txt"
