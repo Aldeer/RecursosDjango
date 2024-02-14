@@ -1,0 +1,31 @@
+########## CRUD BASICO CON DJANGO ##########
+
+
+1_ Ingresar a la consola de django:
+    python manage.py shell
+2_ Antes de comenzar la consulta debemos importar los modelos
+con los que vamos a trabajar. Por Ejemplo:
+    from models import Libro
+
+Una vez importado los modelos con los que vamos a trabajar podemos
+realizar varios tipos de consulta a la base de datos desde la consola
+de django. La primera es la creacion de un registro
+
+############ CREANDO REGISTRO ############
+Ejemplo 1:
+>>> Autor.objects.create(nombre="Pepe", apellido="Gonzalez", nacionalidad="Mexico")
+<Autor: Pepe>
+>>>
+Ejemplo 2 (con instancia):
+>>> nuevo = Autor(nombre="Pepe", apellido="Gonzalez" nacionalidad="Mexico")
+>>> nuevo.save()
+
+
+########## LISTAR TODOS LOS REGISTROS ##########
+>>> Autor.objects.all()
+nota: devuelve una lista con todos los registros de autores de la base de datos
+
+########## FILTRAR REGISTROS ##########
+>>>Autor.objects.filter(nacionalidad="Japon")
+nota: devuelve una lista de registros de autores que tengan como
+    nacionalidad Japon
